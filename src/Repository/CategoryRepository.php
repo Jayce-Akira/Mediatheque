@@ -48,3 +48,4 @@ class CategoryRepository extends ServiceEntityRepository
     }
     */
 }
+

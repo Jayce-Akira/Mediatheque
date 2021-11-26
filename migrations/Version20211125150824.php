@@ -29,3 +29,4 @@ final class Version20211125150824 extends AbstractMigration
         $this->addSql('DROP TABLE livre');
     }
 }
+

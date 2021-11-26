@@ -35,3 +35,4 @@ final class Version20211126114520 extends AbstractMigration
         $this->addSql('ALTER TABLE livre DROP category_id');
     }
 }
+

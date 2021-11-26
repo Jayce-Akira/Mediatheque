@@ -30,4 +30,3 @@ habitants des environs inscrits.
 # Procédure de mise en place en local
 - Cloner le fichier sur votre ordinateur avec  
   'git clone https://github.com/Jayce-Akira/Mediatheque.git'
-
