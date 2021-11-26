@@ -1,0 +1,16 @@
+
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<article>
+     <h2>{{ livre.title }}</h2>
+    <div class="metadata">date de publication le {{ livre.releaseDate | date('d/m/Y') }} la categorie Mangas</div>
+    <div class="content">
+        <img src="{{ livre.image }}" alt="">
+           <div> {{ livre.description | raw }} </div>
+        <a href="" class="btn btn-success">Réserver!</a>
+    </div>
+</article>
+
+{% endblock %}

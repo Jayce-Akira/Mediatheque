@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% form_theme formLivre 'bootstrap_4_layout.html.twig' %}
+
+
+{% block body %}
+
+ {% if editMode %}
+
+<h1>Modification du livre</h1>
+
+ {% else %}
+
+    <h1>Enregistrer un livre</h1>
+
+{% endif %}
+
+    {{ form_start(formLivre) }}
+    
+    {{ form_row(formLivre.title, {'attr':{'placeholder':"Titre du Livre"}})}}
+    {{ form_row(formLivre.image, {'attr':{'placeholder':"Image du Livre"}})}}
+    {{ form_row(formLivre.description, {'attr':{'placeholder':"Description du Livre"}})}}
+    {{ form_row(formLivre.author, {'attr':{'placeholder':"Auteur du Livre"}})}}
+    {{ form_row(formLivre.releaseDate) }}
+    </br>
+    <button type="submit" class="btn btn-success">
+    {% if editMode %}
+
+        Enregistrer les modifications
+    
+        {% else %}
+
+        Ajouter le Livre
+
+        {% endif %}
+    
+    </button>
+
+    {{ form_end(formLivre) }}
+
+
+{% endblock %}

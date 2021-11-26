@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MediathequeController!{% endblock %}
+
+{% block body %}
+
+<section class="livres">
+
+    {% for livre in livres %}
+<article>
+    <h2>{{ livre.title }}</h2>
+    <div class="metadata">date de publication le {{ livre.releaseDate | date('d/m/Y') }} la categorie Mangas</div>
+    <div class="content">
+        <img src="{{ livre.image }}" alt="">
+           <div> {{ livre.description | raw }} </div>
+        <a href="{{ path('livre_show', {'id':livre.id})}}" class="btn btn-primary">Réserver</a>
+    </div>
+</article>
+ {% endfor %}
+
+</section>
+
+{% endblock %}
